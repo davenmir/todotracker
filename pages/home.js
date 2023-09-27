@@ -16,7 +16,6 @@ export default function HomePage() {
         <div className={styles.mypic}>
           <img width={"200"} src="./me.jpg" />
         </div>
-        <TodoList />
       </div>
     </>
   );
