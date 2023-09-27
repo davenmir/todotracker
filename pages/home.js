@@ -1,9 +1,7 @@
+import TodoList from "@/components/ToDoComponent";
 import styles from "../styles/Home.module.css";
 
 export default function HomePage() {
-
-  
-
   return (
     <>
       <div className={styles.pageBody}>
@@ -18,6 +16,7 @@ export default function HomePage() {
         <div className={styles.mypic}>
           <img width={"200"} src="./me.jpg" />
         </div>
+        <TodoList />
       </div>
     </>
   );
