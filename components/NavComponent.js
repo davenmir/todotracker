@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "../styles/NavComponent.module.css";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Button from '@mui/material/Button';
 
 const NavComponent = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -14,9 +15,9 @@ const NavComponent = () => {
 
   return (
     <div className={styles.nav}>
-      <button className={styles.menuButton} onClick={handleClick}>
+      <Button  onClick={handleClick}>
         Menu
-      </button>
+      </Button>
       {modalOpen && (
         <div className="modal">
           <ul className={styles.navlinks}>
