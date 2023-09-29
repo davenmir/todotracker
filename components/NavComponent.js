@@ -1,37 +1,67 @@
-import Link from "next/link";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import Container from "@mui/material/Container";
+import MenuItem from "@mui/material/MenuItem";
+import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/NavComponent.module.css";
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import Button from '@mui/material/Button';
+import Link from "next/link";
 
-const NavComponent = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const router = useRouter();
+const pages = ["ToDo List", "Blog"];
 
+function NavComponent() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleClick = () => {
-    setModalOpen(!modalOpen);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
   };
 
   return (
-    <div className={styles.nav}>
-      <Button  onClick={handleClick}>
-        Menu
-      </Button>
-      {modalOpen && (
-        <div className="modal">
-          <ul className={styles.navlinks}>
-            <Link href="/" onClick={() => router.push("/")}>
-              <p className={styles.link}>Home</p>
-            </Link>
-            <Link href="/ToDo" onClick={() => router.push("/ToDo")}>
-              <p className={styles.link}>To Do</p>
-            </Link>
-          </ul>
-        </div>
-      )}
-    </div>
+    <AppBar position="static">
+      <Container maxWidth="xl">
+        <Toolbar className={styles.topBar} disableGutters>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleOpenNavMenu}
+            className={styles.iconButton}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            className={styles.menuBox}
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            keepMounted
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+          >
+            {pages.map((page) => (
+              <Link href={page} passHref className={styles.links}>
+                <MenuItem
+                  className={styles.menuitems}
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                >
+                  {page}
+                </MenuItem>
+              </Link>
+            ))}
+          </Menu>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
-};
-
+}
 export default NavComponent;
