@@ -1,4 +1,3 @@
-import TodoList from "@/components/ToDoComponent";
 import styles from "../styles/Home.module.css";
 import { Typography } from "@mui/material";
 

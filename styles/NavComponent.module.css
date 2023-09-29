@@ -1,28 +1,13 @@
-.topBar {
-  margin: 2px;
-}
-
 .iconButton:hover {
   background-color: inherit;
 }
 
-.menuBox {
-  width: 50%;
-}
-
 .menuitems {
-  display: flex;
   background-color: rgb(136, 181, 226);
-  padding: 1em;
-  padding-bottom: 0.75em;
-  text-decoration: none;
-}
 
-.links {
+  width: 100px;
   text-decoration: none;
-  display: inherit;
-  margin: -10px 0px -8px 0px;
-  color: black;
+  border: 2px solid green;
 }
 .links:hover {
   color: rgb(136, 181, 226);

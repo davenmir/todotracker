@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/NavComponent.module.css";
 import Link from "next/link";
 
-const pages = ["ToDo List", "Blog"];
+const pages = ["todo", "blog"];
 
 function NavComponent() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,8 +24,8 @@ function NavComponent() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar className={styles.topBar} disableGutters>
+      <Container>
+        <Toolbar disableGutters>
           <IconButton
             size="large"
             edge="start"
@@ -37,6 +37,25 @@ function NavComponent() {
             <MenuIcon />
           </IconButton>
           <Menu
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            keepMounted
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+          >
+            <MenuItem>
+              <Link href="/" className={styles.menuitems}>
+                Home
+              </Link>
+              <Link href="/a" className={styles.menuitems}>
+                Dome
+              </Link>
+            </MenuItem>
+          </Menu>
+          {/* <Menu
             className={styles.menuBox}
             anchorEl={anchorElNav}
             anchorOrigin={{
@@ -48,17 +67,13 @@ function NavComponent() {
             onClose={handleCloseNavMenu}
           >
             {pages.map((page) => (
-              <Link href={page} passHref className={styles.links}>
-                <MenuItem
-                  className={styles.menuitems}
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                >
-                  {page}
+              <Link href={page} passHref className={styles.menuitems}>
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  {page.toUpperCase()}
                 </MenuItem>
               </Link>
             ))}
-          </Menu>
+          </Menu> */}
         </Toolbar>
       </Container>
     </AppBar>
