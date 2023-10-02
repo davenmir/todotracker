@@ -1,26 +1,79 @@
 import NavComponent from "@/components/NavComponent";
 import styles from "../../styles/Home.module.css";
-import { Typography } from "@mui/material";
+import {
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
 
 export default function HomePage() {
   return (
     <>
-    <NavComponent/>
+      <NavComponent />
+
       <div className={styles.pageBody}>
+        <br />
         <div className={styles.pageContentContainer}>
-          <Typography variant="h1" className={styles.header}>
-            Home Page
+          <Typography variant="h5" className={styles.header}>
+            Portfolio <br />
+            Michael Davenport
           </Typography>
           <hr className={styles.hr} />
-          <Typography variant="p" align="center" paragraph="false">
-            This is the home page. It's a good place to start. Hopefully this
-            makes me a better developer in the long term. I cannot stress how
-            much I want to not be shit at this and I REALLY REALLY do not want
-            to fail at this.
-          </Typography>
-          <div className={styles.mypic}>
-            <img width={"200"} src="./me.jpg" />
-          </div>
+          <Accordion className={styles.accordion}>
+            <AccordionSummary
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography
+                sx={{
+                  fontSize: 24,
+                  letterSpacing: "0em",
+                  textTransform: "uppercase",
+                  marginLeft: "1.75em",
+                }}
+              >
+                Who I am
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                My name is <b>Michael</b> and I am a software engineer. I have
+                been coding professionally for nearly three years now.
+              </Typography>
+              <div className={styles.mypic}>
+                <img width={"200"} src="./me.jpg" />
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className={styles.accordion}>
+            <AccordionSummary
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography
+                sx={{
+                  fontSize: 24,
+                  letterSpacing: "0em",
+                  textTransform: "uppercase",
+                  marginLeft: "1.75em",
+                }}
+              >
+                What I do
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                I primarily consider myself a fullstack developer. I have
+                experience with React, Angular, Node, MongoDB, MySQL, C#
+                (Blazor), and more.
+                <br /> I also consider myself to be a good cook and enjoy being
+                in the kitchen. In my free time I like to read fiction, play
+                with my dog, and ride my motorcycle.
+                <br /> I currently work at Washington University in St. Louis.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         </div>
       </div>
     </>

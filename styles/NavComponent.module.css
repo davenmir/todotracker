@@ -2,12 +2,13 @@
   background-color: inherit;
 }
 
-.menuitems {
-  background-color: rgb(136, 181, 226);
-
-  width: 100px;
+.links{
   text-decoration: none;
-  border: 2px solid green;
+  color:black;
+}
+.menuitems {
+  text-decoration: none;
+  background-color: inherit;
 }
 .links:hover {
   color: rgb(136, 181, 226);

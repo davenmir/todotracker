@@ -14,13 +14,18 @@
   margin-top: 1%;
 }
 
-
 .mypic {
   text-align: center;
 }
 
-.pageContentContainer{
+.pageContentContainer {
   background-color: rgb(205, 205, 240);
   margin: 1% 10% 1% 10%;
+  border: solid gold 2px;
+}
+
+.accordion {
+  background-color: rgb(148, 148, 212);
+  margin: 3% 20% 3% 20%;
   border: solid gold 2px;
 }

@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/NavComponent.module.css";
 import Link from "next/link";
 
-const pages = ["home","todo", "blog"];
+const pages = ["home", "todo", "blog"];
 
 function NavComponent() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -37,18 +37,23 @@ function NavComponent() {
             <MenuIcon />
           </IconButton>
           <Menu
+            className={styles.menu}
             anchorEl={anchorElNav}
             anchorOrigin={{
               vertical: "top",
               horizontal: "right",
             }}
-            keepMounted
+            
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
           >
             {pages.map((page) => (
-              <Link href={page} passHref >
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <Link href={page} className={styles.links} passHref>
+                <MenuItem
+                  key={page}
+                  className={styles.menuitems}
+                  onClick={handleCloseNavMenu}
+                >
                   {page.toUpperCase()}
                 </MenuItem>
               </Link>
