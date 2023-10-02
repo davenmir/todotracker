@@ -8,10 +8,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 
-import { makeStyles } from "@mui/styles";
-
 export default function HomePage() {
-
   return (
     <>
       <NavComponent />
@@ -21,7 +18,6 @@ export default function HomePage() {
         <div className={styles.pageContentContainer}>
           <Typography variant="h5" className={styles.header}>
             Portfolio <br />
-            Michael Davenport
           </Typography>
           <hr className={styles.hr} />
           <Accordion className={styles.accordion}>
@@ -33,12 +29,15 @@ export default function HomePage() {
                 sx={{
                   fontSize: 24,
                   letterSpacing: "0em",
+                  position: "relative",
+                  margin: "auto",
                 }}
               >
                 Who I am
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
+              <hr className={styles.details} />
               <Typography>
                 My name is <b>Michael</b> and I am a software engineer. I have
                 been coding professionally for nearly three years now.
@@ -57,12 +56,16 @@ export default function HomePage() {
                 sx={{
                   fontSize: 24,
                   letterSpacing: "0em",
+                  position: "relative",
+                  margin: "auto",
                 }}
               >
                 What I do
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
+              <hr className={styles.details} />
+
               <Typography>
                 I primarily consider myself a fullstack developer. I have
                 experience with React, Angular, Node, MongoDB, MySQL, C#

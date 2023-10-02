@@ -23,7 +23,7 @@ function NavComponent() {
 
   return (
     <AppBar position="static">
-      <Toolbar>
+      <Toolbar sx={{ backgroundColor: "#4189e8" }}>
         <IconButton
           size="large"
           edge="start"
@@ -55,6 +55,7 @@ function NavComponent() {
             </Link>
           ))}
         </Menu>
+        <span className={styles.name}>Michael Davenport</span>
       </Toolbar>
     </AppBar>
   );
