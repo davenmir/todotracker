@@ -1,7 +1,9 @@
-.container{
-    height: absolute;
+.container {
+  height: absolute;
 }
-html, body {
-    margin: 0;
+html{
     height: 100%;
+}
+body {
+  margin: 0;
 }

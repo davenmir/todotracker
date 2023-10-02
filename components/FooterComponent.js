@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Link,
-  Container,
-  Grid,
-  Typeography,
-  IconButton,
-} from "@mui/material";
+import { Box, Grid, IconButton } from "@mui/material";
 import { ListItem, List } from "@mui/joy";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -17,11 +10,11 @@ function FooterComponent() {
     <>
       <Box
         sx={{
-          flexGrow: 1,
           display: "flex",
+          position: "fixed",
+          bottom: 0,
+          width: "100%",
           justifyContent: "center",
-          gap: 2,
-          flexWrap: "wrap",
           "& > *": { minWidth: 0, flexBasis: 200 },
           bgcolor: "#2196f3",
         }}
@@ -35,7 +28,10 @@ function FooterComponent() {
               </IconButton>
             </ListItem>
             <ListItem>
-              <IconButton href="https://www.linkedin.com/in/michael-davenport-41bab6132/" target="_blank">
+              <IconButton
+                href="https://www.linkedin.com/in/michael-davenport-41bab6132/"
+                target="_blank"
+              >
                 <LinkedInIcon />
               </IconButton>
             </ListItem>

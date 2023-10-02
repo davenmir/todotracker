@@ -65,7 +65,6 @@ export default function HomePage() {
             </AccordionSummary>
             <AccordionDetails>
               <hr className={styles.details} />
-
               <Typography>
                 I primarily consider myself a fullstack developer. I have
                 experience with React, Angular, Node, MongoDB, MySQL, C#
@@ -78,10 +77,8 @@ export default function HomePage() {
             </AccordionDetails>
           </Accordion>
         </div>
-        <div className={styles.footer}>
-          <FooterComponent />
-        </div>
       </div>
+      <FooterComponent />
     </>
   );
 }
