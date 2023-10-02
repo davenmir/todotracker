@@ -1,9 +1,11 @@
-import styles from "../styles/Home.module.css";
+import NavComponent from "@/components/NavComponent";
+import styles from "../../styles/Home.module.css";
 import { Typography } from "@mui/material";
 
 export default function HomePage() {
   return (
     <>
+    <NavComponent/>
       <div className={styles.pageBody}>
         <div className={styles.pageContentContainer}>
           <Typography variant="h1" className={styles.header}>

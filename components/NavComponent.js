@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import styles from "../styles/NavComponent.module.css";
 import Link from "next/link";
 
-const pages = ["todo", "blog"];
+const pages = ["home","todo", "blog"];
 
 function NavComponent() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -46,34 +46,14 @@ function NavComponent() {
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
           >
-            <MenuItem>
-              <Link href="/" className={styles.menuitems}>
-                Home
-              </Link>
-              <Link href="/a" className={styles.menuitems}>
-                Dome
-              </Link>
-            </MenuItem>
-          </Menu>
-          {/* <Menu
-            className={styles.menuBox}
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            keepMounted
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-          >
             {pages.map((page) => (
-              <Link href={page} passHref className={styles.menuitems}>
+              <Link href={page} passHref >
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   {page.toUpperCase()}
                 </MenuItem>
               </Link>
             ))}
-          </Menu> */}
+          </Menu>
         </Toolbar>
       </Container>
     </AppBar>
