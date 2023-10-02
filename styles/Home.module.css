@@ -1,11 +1,16 @@
 .pageBody {
-  padding-top: 1px;
+  padding-top: 0em;
   background-color: rgb(148, 148, 212);
   min-height: calc(100vh - 50px);
 }
 
 .header {
   text-align: center;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
 }
 
 .hr {

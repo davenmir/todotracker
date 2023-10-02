@@ -1,4 +1,5 @@
 import NavComponent from "@/components/NavComponent";
+import FooterComponent from "@/components/FooterComponent";
 import styles from "../../styles/Home.module.css";
 import {
   Typography,
@@ -83,6 +84,7 @@ export default function HomePage() {
             </AccordionDetails>
           </Accordion>
         </div>
+        <FooterComponent className={styles.footer}/>
       </div>
     </>
   );

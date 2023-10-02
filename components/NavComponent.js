@@ -24,43 +24,39 @@ function NavComponent() {
 
   return (
     <AppBar position="static">
-      <Container>
-        <Toolbar disableGutters>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={handleOpenNavMenu}
-            className={styles.iconButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Menu
-            className={styles.menu}
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-          >
-            {pages.map((page) => (
-              <Link href={page} className={styles.links} passHref>
-                <MenuItem
-                  key={page}
-                  className={styles.menuitems}
-                  onClick={handleCloseNavMenu}
-                >
-                  {page.toUpperCase()}
-                </MenuItem>
-              </Link>
-            ))}
-          </Menu>
-        </Toolbar>
-      </Container>
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={handleOpenNavMenu}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Menu
+          className={styles.menu}
+          anchorEl={anchorElNav}
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+          open={Boolean(anchorElNav)}
+          onClose={handleCloseNavMenu}
+        >
+          {pages.map((page) => (
+            <Link href={page} className={styles.links} passHref>
+              <MenuItem
+                key={page}
+                className={styles.menuitems}
+                onClick={handleCloseNavMenu}
+              >
+                {page.toUpperCase()}
+              </MenuItem>
+            </Link>
+          ))}
+        </Menu>
+      </Toolbar>
     </AppBar>
   );
 }
