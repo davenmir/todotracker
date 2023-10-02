@@ -9,13 +9,8 @@ import {
 } from "@mui/material";
 
 import { makeStyles } from "@mui/styles";
-const useStyles = makeStyles({
-  content: {
-    justifyContent: "center",
-  },
-});
+
 export default function HomePage() {
-  const classes = useStyles();
 
   return (
     <>
@@ -33,13 +28,11 @@ export default function HomePage() {
             <AccordionSummary
               aria-controls="panel1a-content"
               id="panel1a-header"
-              classes={{ content: classes.content }}
             >
               <Typography
                 sx={{
                   fontSize: 24,
                   letterSpacing: "0em",
-                  textTransform: "uppercase",
                 }}
               >
                 Who I am
@@ -59,13 +52,11 @@ export default function HomePage() {
             <AccordionSummary
               aria-controls="panel1a-content"
               id="panel1a-header"
-              classes={{ content: classes.content }}
             >
               <Typography
                 sx={{
                   fontSize: 24,
                   letterSpacing: "0em",
-                  textTransform: "uppercase",
                 }}
               >
                 What I do
@@ -84,7 +75,9 @@ export default function HomePage() {
             </AccordionDetails>
           </Accordion>
         </div>
-        <FooterComponent className={styles.footer}/>
+        <div className={styles.footer}>
+          <FooterComponent />
+        </div>
       </div>
     </>
   );

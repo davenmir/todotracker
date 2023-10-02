@@ -1,15 +1,23 @@
 .pageBody {
   padding-top: 0em;
   background-color: rgb(148, 148, 212);
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 100px);
+}
+
+.pageContentContainer {
+  background-color: rgb(205, 205, 240);
+  margin: 5% 20% 0% 20%;
+  border: solid gold 2px;
+  padding: .5em
 }
 
 .header {
   text-align: center;
 }
 
-.footer{
+.footer {
   position: fixed;
+  width: 100%;
   bottom: 0;
 }
 
@@ -21,12 +29,6 @@
 
 .mypic {
   text-align: center;
-}
-
-.pageContentContainer {
-  background-color: rgb(205, 205, 240);
-  margin: 1% 10% 1% 10%;
-  border: solid gold 2px;
 }
 
 .accordion {
